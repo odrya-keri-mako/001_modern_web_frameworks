@@ -40,7 +40,7 @@ All implementations create essentially the same application:
 - JavaScript ES6+
 
 ## Minimum development environment
-- Node.js v24.15.0
+- Node.js v22.22.3
 - npm v11
 - TypeScript v6.0.x
   
