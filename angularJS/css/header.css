@@ -1,0 +1,4 @@
+.nav-item a.active {
+	text-decoration: underline;
+	pointer-events: none;
+}

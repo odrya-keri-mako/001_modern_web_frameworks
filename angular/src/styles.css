@@ -1,0 +1,9 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+.text-small-caps {
+	font-variant: small-caps;
+}
+.fs-sm {
+  font-size: 0.7rem;
+}

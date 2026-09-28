@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AngularJS application</title>
+	<link rel="icon" type="image/svg+xml" href="./assets/image/icon/angularJS.svg">
+
+	<!-- Application components -->
+  <link rel="stylesheet" 
+				href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+	<link rel="stylesheet" 
+				href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+<!-- 
+Define application is angularJS application
+Change Bootstrap theme conditional from $rootScope.theme value
+-->
+<body ng-app="app"
+			ng-attr-data-bs-theme="{{ $root.theme || 'dark' }}">
+	
+	<!-- Application container -->
+	<ui-view class="app-container"></ui-view>
+
+	<!-- Application components -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.1.2/angular-ui-router.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.1.2/stateEvents.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-css/1.0.8/angular-css.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+	<script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bg-body-tertiary">
+
+	<!-- Container -->
+	<div class="container-fluid">
+
+		<!-- Hamburger icon -->
+		<button class="navbar-toggler ms-auto" 
+						type="button" 
+						data-bs-toggle="collapse"
+						data-bs-target="#navbar_content" 
+						aria-controls="navbar_content" 
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar content -->
+		<div id="navbar_content" 
+				 class="collapse navbar-collapse mt-3 mt-sm-0">
+
+			<!-- Navbar content LEFT -->
+			<ul class="navbar-nav me-auto ms-0 ms-sm-3">
+
+				<!-- Home -->
+				<li class="nav-item mx-1">
+					<!-- 
+					When state defined in ui-sref is selected (home), 
+					then element get class from attribute 
+					ui-sref-active property (active),
+					otherwise class removed	
+					-->
+					<a class="nav-link" 
+						 ui-sref="home" 
+						 ui-sref-active="active"
+						 data-bs-toggle="collapse" 
+						 data-bs-target=".navbar-collapse.show">
+						<span class="text-capitalize text-small-caps">
+							<i class="fa-solid fa-house me-1"></i>
+							<span>Home</span>
+						</span>
+					</a>
+				</li>
+
+				<!-- Page1 -->
+				<li class="nav-item mx-1">
+					<a class="nav-link" 
+						 ui-sref="page1" 
+						 ui-sref-active="active"
+						 data-bs-toggle="collapse" 
+						 data-bs-target=".navbar-collapse.show">
+						<span class="text-capitalize text-small-caps">
+							<i class="fa-solid fa-face-smile me-1"></i>
+							<span>Page1</span>
+						</span>
+					</a>
+				</li>
+
+				<!-- Page2 -->
+				<li class="nav-item mx-1">
+					<a class="nav-link" 
+						 ui-sref="page2" 
+						 ui-sref-active="active"
+						 data-bs-toggle="collapse" 
+						 data-bs-target=".navbar-collapse.show">
+						<span class="text-capitalize text-small-caps">
+							<i class="fa-solid fa-globe me-1"></i>
+							<span>Page2</span>
+						</span>
+					</a>
+				</li>
+			</ul>
+
+			<!-- Navbar content RIGHT -->
+			<ul class="navbar-nav ms-auto me-0 me-sm-3">
+
+				<!-- Theme -->
+				<li class="nav-item mx-1">
+					<button type="button"
+									class="nav-link border-0 bg-transparent"
+									ng-click="toggleTheme()"
+									title="Change theme"
+									aria-label="Change theme"
+									data-bs-toggle="collapse" 
+						 			data-bs-target=".navbar-collapse.show">
+						<!-- 
+						Element class conditional.
+						when $rootScope.theme is 'dark' then get class 'fa-sun',
+						when $rootScope.theme is 'light' then get class 'fa-moon',
+						otherwise nothing
+						-->
+            <i class="fa-solid me-1 me-sm-0"
+               ng-class="{'fa-sun': $root.theme === 'dark',
+                          'fa-moon': $root.theme === 'light'}"></i>
+						<span class="d-sm-none">
+							Change theme
+						</span>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
